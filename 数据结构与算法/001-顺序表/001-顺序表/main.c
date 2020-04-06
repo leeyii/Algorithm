@@ -10,7 +10,7 @@
 
 #define OK 1
 #define ERROR 0
-#define MAX_SIZE 10
+#define MAX_SIZE 100
 
 typedef int Element;
 typedef int Status;
@@ -22,7 +22,7 @@ typedef struct {
 }SqList;
 
 // 初始化 顺序表
-Status initList(SqList *l) {
+Status InitList(SqList *l) {
     // 入参判断
     if (l == NULL) return ERROR;
     // 分配内存
@@ -62,11 +62,11 @@ Status ListInsert(SqList *l, int i, Element e) {
     // 4.长度+1
     
     // 1.
-    if (i < 0 || i > l->length - 1) return ERROR;
+    if (i < 0 || i > l->length) return ERROR;
     // 2.
     if (l->length == MAX_SIZE) return ERROR;
     // 3.2
-    if (i < l->length - 1) {
+    if (i < l->length) {
         for (int j = l->length - 1; j >= i ; j--) {
             l->data[j + 1] = l->data[j];
         }
@@ -96,6 +96,7 @@ Status ListDelete(SqList *l, int i) {
     if (l == NULL || i < 0 || i > l->length - 1) return ERROR; // 这行代码包含了上面代码的逻辑
     
     if (i < l->length - 1) {
+        // 不在表尾
         for (int x = i; x < l->length; x++) {
             l->data[x] = l->data[x+1];
         }
@@ -156,7 +157,7 @@ int main(int argc, const char * argv[]) {
     
     SqList list;
     
-    initList(&list);
+    InitList(&list);
     
     printList(list);
     

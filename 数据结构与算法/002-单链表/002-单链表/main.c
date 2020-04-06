@@ -11,7 +11,6 @@
 
 #define OK 1
 #define ERROR 0
-#define MAX_SIZE 10
 
 typedef int Element;
 typedef int Status;
@@ -57,6 +56,7 @@ Status ListInsert(LinkList *l, int i, Element e) {
     
     // 创建新的结点
     Node *node = malloc(sizeof(Node));
+    if (!node) return ERROR;
     node->data = e;
     // 新节点的next 指向p的next
     node->next = p->next;
