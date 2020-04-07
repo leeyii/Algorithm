@@ -86,6 +86,7 @@ void ShowList(LinkList list) {
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
+<<<<<<< HEAD
     
     Status iStatus;
     LinkList list;
@@ -96,4 +97,7 @@ int main(int argc, const char * argv[]) {
     ShowList(list);
     
     return 0;
+=======
+    return 0;//
+>>>>>>> 920f213147ebc4706dae697995b8d16d34d24ae6
 }
