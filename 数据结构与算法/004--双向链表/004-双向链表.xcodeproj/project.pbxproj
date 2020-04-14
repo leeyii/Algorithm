@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0747A99D2439A77600DA4094 /* 004--双向链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "004--双向链表"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0747A99D2439A77600DA4094 /* 004-双向链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "004-双向链表"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0747A9A02439A77600DA4094 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 		0747A9942439A77600DA4094 = {
 			isa = PBXGroup;
 			children = (
-				0747A99F2439A77600DA4094 /* 004--双向链表 */,
+				0747A99F2439A77600DA4094 /* 004-双向链表 */,
 				0747A99E2439A77600DA4094 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +49,25 @@
 		0747A99E2439A77600DA4094 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0747A99D2439A77600DA4094 /* 004--双向链表 */,
+				0747A99D2439A77600DA4094 /* 004-双向链表 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0747A99F2439A77600DA4094 /* 004--双向链表 */ = {
+		0747A99F2439A77600DA4094 /* 004-双向链表 */ = {
 			isa = PBXGroup;
 			children = (
 				0747A9A02439A77600DA4094 /* main.c */,
 			);
-			path = "004--双向链表";
+			path = "004-双向链表";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0747A99C2439A77600DA4094 /* 004--双向链表 */ = {
+		0747A99C2439A77600DA4094 /* 004-双向链表 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0747A9A42439A77600DA4094 /* Build configuration list for PBXNativeTarget "004--双向链表" */;
+			buildConfigurationList = 0747A9A42439A77600DA4094 /* Build configuration list for PBXNativeTarget "004-双向链表" */;
 			buildPhases = (
 				0747A9992439A77600DA4094 /* Sources */,
 				0747A99A2439A77600DA4094 /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = "004--双向链表";
+			name = "004-双向链表";
 			productName = "004--双向链表";
-			productReference = 0747A99D2439A77600DA4094 /* 004--双向链表 */;
+			productReference = 0747A99D2439A77600DA4094 /* 004-双向链表 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0747A9982439A77600DA4094 /* Build configuration list for PBXProject "004--双向链表" */;
+			buildConfigurationList = 0747A9982439A77600DA4094 /* Build configuration list for PBXProject "004-双向链表" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +109,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0747A99C2439A77600DA4094 /* 004--双向链表 */,
+				0747A99C2439A77600DA4094 /* 004-双向链表 */,
 			);
 		};
 /* End PBXProject section */
@@ -254,7 +254,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0747A9982439A77600DA4094 /* Build configuration list for PBXProject "004--双向链表" */ = {
+		0747A9982439A77600DA4094 /* Build configuration list for PBXProject "004-双向链表" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0747A9A22439A77600DA4094 /* Debug */,
@@ -263,7 +263,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0747A9A42439A77600DA4094 /* Build configuration list for PBXNativeTarget "004--双向链表" */ = {
+		0747A9A42439A77600DA4094 /* Build configuration list for PBXNativeTarget "004-双向链表" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0747A9A52439A77600DA4094 /* Debug */,
