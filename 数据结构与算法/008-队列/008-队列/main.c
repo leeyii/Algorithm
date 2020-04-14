@@ -20,9 +20,9 @@ typedef int QElemType;
 typedef int Status;
 
 typedef struct {
-    int data[MAXSIZE];
-    int front;
-    int rear;
+    int data[MAXSIZE];  // 存放数据的数组
+    int front;          // 队首索引
+    int rear;           // 队尾索引
 }SqQueue;
 
 // 1.初始队列
@@ -115,3 +115,16 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+
+
+//初始化队列成功
+//队列中的元素为:0  1  2  3  4  5  6  7  8
+//队列的长度为:9
+//获取出队元素:0
+//队列中的元素为:1  2  3  4  5  6  7  8
+//获取队列头部:1
+//队列是否为空:0
+//清空队列
+//队列是否为空:1
+//队列中的元素为:
+//队列的长度为:0
