@@ -14,7 +14,7 @@
 #define TRUE 1
 #define FALSE 0
 
-#define MAXSIZE 5
+#define MAXSIZE 10
 
 typedef int QElemType;
 typedef int Status;
@@ -57,15 +57,15 @@ Status getQueueHead(SqQueue Q, QElemType *e) {
 }
 
 // 6.入队
-Status inQueue(SqQueue *Q, QElemType e) {
+Status enqueue(SqQueue *Q, QElemType e) {
     if ((Q->rear + 1) % MAXSIZE == Q->front) return ERROR;
+    Q->data[Q->rear] = e;
     Q->rear = (Q->rear + 1) % MAXSIZE;
-    Q->data[Q->rear];
-    return OK
+    return OK;
 }
 
 // 7.出队
-Status outQueue(SqQueue *Q, QElemType *e) {
+Status dequeue(SqQueue *Q, QElemType *e) {
     if (Q->front == Q->rear) return ERROR;
     *e = Q->data[Q->front];
     Q->front = (Q->front + 1) % MAXSIZE;
@@ -73,15 +73,13 @@ Status outQueue(SqQueue *Q, QElemType *e) {
 }
 
 // 遍历
-Status queueTraverse(SqQueue Q) {
+void queueTraverse(SqQueue Q) {
     
     int i = Q.front;
-    
-    while ((i + 1) % MAXSIZE != Q.front) {
+    while (i != Q.rear) {
         printf("%d  ", Q.data[i]);
         i = (i + 1) % MAXSIZE;
     }
-    
     printf("\n");
 }
 
@@ -89,13 +87,31 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     
     SqQueue Q;
+    QElemType e;
     
-    printf("初始化队列\n");
-    initQueue(&Q);
-    
-    for (int i = 0; i < 12; i++) {
-        inQueue(&Q, i);
+    if (initQueue(&Q)) {
+        printf("初始化队列成功\n");
     }
+    
+    for (int i = 0; i < 10; i++) {
+        enqueue(&Q, i);
+    }
+    printf("队列中的元素为:");
+    queueTraverse(Q);
+    printf("队列的长度为:%d\n", queueLength(Q));
+    dequeue(&Q, &e);
+    printf("获取出队元素:%d\n", e);
+    printf("队列中的元素为:");
+    queueTraverse(Q);
+    getQueueHead(Q, &e);
+    printf("获取队列头部:%d\n", e);
+    printf("队列是否为空:%d\n", queueEmpey(Q));
+    printf("清空队列\n");
+    clearQueue(&Q);
+    printf("队列是否为空:%d\n", queueEmpey(Q));
+    printf("队列中的元素为:");
+    queueTraverse(Q);
+    printf("队列的长度为:%d\n", queueLength(Q));
     
     return 0;
 }

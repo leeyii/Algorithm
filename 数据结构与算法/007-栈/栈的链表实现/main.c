@@ -19,14 +19,15 @@
 typedef int Status;
 typedef int Element;
 
+// 栈结点
 typedef struct StackNode {
     Element data;
     struct StackNode *next;
 }StackNode, *StackNodeP;
 
 typedef struct LinkStack {
-    StackNodeP top;
-    int length;
+    StackNodeP top; // 栈顶指针
+    int length;     // 栈的长度
 }LinkStack;
 
 /// 初始化
@@ -43,6 +44,7 @@ Status clearStack(LinkStack *s) {
     StackNodeP p, temp;
     
     p = s->top;
+    // 释放所有结点
     while (p) {
         temp = p;
         p = p->next;
@@ -61,8 +63,7 @@ Status stackIsEmpty(LinkStack s) {
     }
 }
 
-/// 判断栈的长度
-
+/// 获取栈的长度
 Status stackLength(LinkStack s) {
     return s.length;
 }
@@ -107,7 +108,6 @@ void stackTraverse(LinkStack s) {
         printf("%d  ", p->data);
         p = p->next;
     }
-    
     printf("\n");
 }
 
@@ -117,12 +117,14 @@ int main(int argc, const char * argv[]) {
     LinkStack stack;
     int e;
     
-    initStack(&stack);
+    if (initStack(&stack)) {
+        printf("链表栈初始化成功\n");
+    }
     
     for (int i = 0; i < 10; i++) {
         push(&stack, i);
     }
-    printf("顺序栈中元素为:\n");
+    printf("链表栈中元素为:\n");
     stackTraverse(stack);
     
     pop(&stack, &e);
