@@ -7,7 +7,11 @@
 		<key>006-线性表练习题.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>1</integer>
+=======
+			<integer>6</integer>
+>>>>>>> b1ec839eb9f3ea98480248957f32b1dcc6ea5527
 		</dict>
 	</dict>
 </dict>

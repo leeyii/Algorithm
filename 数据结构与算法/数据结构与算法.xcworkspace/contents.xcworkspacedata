@@ -29,7 +29,7 @@
       location = "group:003-&#x5355;&#x5411;&#x5faa;&#x73af;&#x94fe;&#x8868;/003-&#x5355;&#x5411;&#x5faa;&#x73af;&#x94fe;&#x8868;.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/lijie/Mine/Git&#x4ed3;&#x5e93;/Algorithm/&#x6570;&#x636e;&#x7ed3;&#x6784;&#x4e0e;&#x7b97;&#x6cd5;/004--&#x53cc;&#x5411;&#x94fe;&#x8868;/004-&#x53cc;&#x5411;&#x94fe;&#x8868;.xcodeproj">
+      location = "group:004-&#x53cc;&#x5411;&#x94fe;&#x8868;/004-&#x53cc;&#x5411;&#x94fe;&#x8868;.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:005-&#x53cc;&#x5411;&#x5faa;&#x73af;&#x94fe;&#x8868;/005-&#x53cc;&#x5411;&#x5faa;&#x73af;&#x94fe;&#x8868;.xcodeproj">
@@ -44,6 +44,10 @@
       location = "group:008-&#x961f;&#x5217;/008-&#x961f;&#x5217;.xcodeproj">
    </FileRef>
    <FileRef
+<<<<<<< HEAD
       location = "group:009-&#x9012;&#x5f52;/009-&#x9012;&#x5f52;.xcodeproj">
+=======
+      location = "group:009-&#x6808;&#x7ec3;&#x4e60;&#x9898;/009-&#x6808;&#x7ec3;&#x4e60;&#x9898;.xcodeproj">
+>>>>>>> b1ec839eb9f3ea98480248957f32b1dcc6ea5527
    </FileRef>
 </Workspace>
