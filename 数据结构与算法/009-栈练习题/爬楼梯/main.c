@@ -16,17 +16,31 @@
 /*
  解法一:
  暴力解法
- 
  */
 
-int func1(int n) {
-    if (n = 1) return 1;
-    return func(n - 1) + func(n - 2);
+int climbStairs1(int n) {
+    if (n == 1) return 1;
+    if (n == 2) return 2;
+    return climbStairs1(n - 1) + climbStairs1(n - 2);
 }
 
-int func2(int n) {
+int climbStairs2(int n) {
     
+    if (n < 3) {
+        return n;
+    }
+    
+    int arr[n];
+    arr[0] = 1;
+    arr[1] = 2;
+    
+    for (int i = 2; i < n; i++) {
+        arr[i] = arr[i - 1] + arr[i - 2];
+    }
+    
+    return arr[n - 1];
 }
+
 
 
 int main(int argc, const char * argv[]) {
