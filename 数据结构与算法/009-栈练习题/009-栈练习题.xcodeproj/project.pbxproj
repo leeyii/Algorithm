@@ -10,6 +10,8 @@
 		074F93F924484B9B007C030E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 074F93F824484B9B007C030E /* main.c */; };
 		074F940424485D05007C030E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 074F940324485D05007C030E /* main.c */; };
 		074F940F24487974007C030E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 074F940E24487974007C030E /* main.c */; };
+		07727CAB24494B76001319C7 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 07727CAA24494B76001319C7 /* main.c */; };
+		07727CB724498033001319C7 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 07727CB624498033001319C7 /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		07727CA624494B76001319C7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		07727CB224498033001319C7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +69,11 @@
 		074F940324485D05007C030E /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		074F940C24487974007C030E /* 爬楼梯 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "爬楼梯"; sourceTree = BUILT_PRODUCTS_DIR; };
 		074F940E24487974007C030E /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		07727CA824494B76001319C7 /* 字符串解码 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "字符串解码"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07727CAA24494B76001319C7 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		07727CAF24494EDD001319C7 /* 字符串解码.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "字符串解码.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		07727CB424498033001319C7 /* 跳跃游戏 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "跳跃游戏"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07727CB624498033001319C7 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +98,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07727CA524494B76001319C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07727CB124498033001319C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +121,8 @@
 				074F93F724484B9B007C030E /* 括号匹配问题 */,
 				074F940224485D05007C030E /* 每日气温 */,
 				074F940D24487974007C030E /* 爬楼梯 */,
+				07727CA924494B76001319C7 /* 字符串解码 */,
+				07727CB524498033001319C7 /* 跳跃游戏 */,
 				074F93DE24484B31007C030E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +133,8 @@
 				074F93F624484B9B007C030E /* 括号匹配问题 */,
 				074F940124485D05007C030E /* 每日气温 */,
 				074F940C24487974007C030E /* 爬楼梯 */,
+				07727CA824494B76001319C7 /* 字符串解码 */,
+				07727CB424498033001319C7 /* 跳跃游戏 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +161,23 @@
 				074F940E24487974007C030E /* main.c */,
 			);
 			path = "爬楼梯";
+			sourceTree = "<group>";
+		};
+		07727CA924494B76001319C7 /* 字符串解码 */ = {
+			isa = PBXGroup;
+			children = (
+				07727CAA24494B76001319C7 /* main.c */,
+				07727CAF24494EDD001319C7 /* 字符串解码.playground */,
+			);
+			path = "字符串解码";
+			sourceTree = "<group>";
+		};
+		07727CB524498033001319C7 /* 跳跃游戏 */ = {
+			isa = PBXGroup;
+			children = (
+				07727CB624498033001319C7 /* main.c */,
+			);
+			path = "跳跃游戏";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +234,40 @@
 			productReference = 074F940C24487974007C030E /* 爬楼梯 */;
 			productType = "com.apple.product-type.tool";
 		};
+		07727CA724494B76001319C7 /* 字符串解码 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07727CAE24494B76001319C7 /* Build configuration list for PBXNativeTarget "字符串解码" */;
+			buildPhases = (
+				07727CA424494B76001319C7 /* Sources */,
+				07727CA524494B76001319C7 /* Frameworks */,
+				07727CA624494B76001319C7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "字符串解码";
+			productName = "字符串解码";
+			productReference = 07727CA824494B76001319C7 /* 字符串解码 */;
+			productType = "com.apple.product-type.tool";
+		};
+		07727CB324498033001319C7 /* 跳跃游戏 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07727CB824498033001319C7 /* Build configuration list for PBXNativeTarget "跳跃游戏" */;
+			buildPhases = (
+				07727CB024498033001319C7 /* Sources */,
+				07727CB124498033001319C7 /* Frameworks */,
+				07727CB224498033001319C7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "跳跃游戏";
+			productName = "跳跃游戏";
+			productReference = 07727CB424498033001319C7 /* 跳跃游戏 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -191,6 +285,12 @@
 						CreatedOnToolsVersion = 11.3;
 					};
 					074F940B24487974007C030E = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					07727CA724494B76001319C7 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					07727CB324498033001319C7 = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
@@ -211,6 +311,8 @@
 				074F93F524484B9B007C030E /* 括号匹配问题 */,
 				074F940024485D05007C030E /* 每日气温 */,
 				074F940B24487974007C030E /* 爬楼梯 */,
+				07727CA724494B76001319C7 /* 字符串解码 */,
+				07727CB324498033001319C7 /* 跳跃游戏 */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +339,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				074F940F24487974007C030E /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07727CA424494B76001319C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07727CAB24494B76001319C7 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07727CB024498033001319C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07727CB724498033001319C7 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +534,46 @@
 			};
 			name = Release;
 		};
+		07727CAC24494B76001319C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KVUQLH6ZXA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		07727CAD24494B76001319C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KVUQLH6ZXA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		07727CB924498033001319C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KVUQLH6ZXA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		07727CBA24498033001319C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KVUQLH6ZXA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -451,6 +609,24 @@
 			buildConfigurations = (
 				074F941124487974007C030E /* Debug */,
 				074F941224487974007C030E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07727CAE24494B76001319C7 /* Build configuration list for PBXNativeTarget "字符串解码" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07727CAC24494B76001319C7 /* Debug */,
+				07727CAD24494B76001319C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07727CB824498033001319C7 /* Build configuration list for PBXNativeTarget "跳跃游戏" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07727CB924498033001319C7 /* Debug */,
+				07727CBA24498033001319C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
