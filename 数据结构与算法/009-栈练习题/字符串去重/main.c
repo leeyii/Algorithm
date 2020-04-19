@@ -67,6 +67,7 @@ Status PushStack(Stack *s, SElemType e) {
 
 Status PopStack(Stack *s, SElemType *e) {
     if (!s) return ERROR;
+    if (e)
     *e = s->data[s->top];
     s->top--;
     return OK;
@@ -84,27 +85,39 @@ int StackLength(Stack s) {
 char * removeDuplicateLetters(char * s){
     
     char *letters = (char *)malloc(sizeof(char) * 26);
+    memset(letters, 0, 26);
     
     unsigned long length = strlen(s);
     
     for (int i = 0; i < length; i++) {
-        letters[s[i]] = i;
+        letters[s[i] - 'a'] =  letters[s[i] - 'a'] + 1;
     }
     
     Stack stack;
-    
+    InitStack(&stack);
     PushStack(&stack, s[0]);
     
     for (int i = 1; i < length; i++) {
         char c = s[i];
         char top;
         GetTop(stack, &top);
-        
+        if (c < top) {
+            while (letters[top - 'a'] > 0 && StackLength(stack) != 0) {
+                letters[top - 'a'] = letters[top - 'a'] - 1;
+                PopStack(&stack, NULL);
+            }
+        }
+        PushStack(&stack, c);
     }
+    PushStack(&stack, '\0');
+    return stack.data;
 }
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
+    
+    char *res = removeDuplicateLetters("bbccaa");
+    printf("%s\n", res);
     return 0;
 }

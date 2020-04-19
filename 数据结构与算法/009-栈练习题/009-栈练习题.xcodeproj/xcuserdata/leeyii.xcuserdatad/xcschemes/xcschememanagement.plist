@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
+		<key>字符串去重.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
 		<key>字符串解码.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -48,6 +53,14 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>18</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>074F940024485D05007C030E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
