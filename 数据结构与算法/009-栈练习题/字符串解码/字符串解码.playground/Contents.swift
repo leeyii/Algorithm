@@ -75,7 +75,6 @@ func stringEncode(_ str: String) -> String {
         case "]":
             // 将栈顶元素出栈
             let elem = stack.pop()!
-            
             if let top = stack.top {
                 // 栈中还有元素
                 top.content.append(elem.result)

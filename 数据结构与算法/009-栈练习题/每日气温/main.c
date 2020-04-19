@@ -18,32 +18,69 @@
  */
 
 // 暴力解法
-//int* dailyTemperatures(int* T, int TSize, int* returnSize){
-//
-//    int *res = (int *)malloc(sizeof(int) * TSize);
-//    *returnSize = TSize;
-//
-//    for (int i = 0; i < TSize; i++) {
-//        int x = T[i];
-//        int diff = 0;
-//        for (int j = i + 1; j < TSize; j++) {
-//            int y = T[j];
-//            if (y > x) {
-//                diff = j - i;
-//                break;
-//            }
-//        }
-//        res[i] = diff;
-//    }
-//    return res;
-//}
+int* dailyTemperatures(int* T, int TSize, int* returnSize){
+
+    int *res = (int *)malloc(sizeof(int) * TSize);
+    *returnSize = TSize;
+
+    for (int i = 0; i < TSize; i++) {
+        int x = T[i];
+        int diff = 0;
+        for (int j = i + 1; j < TSize; j++) {
+            int y = T[j];
+            if (y > x) {
+                diff = j - i;
+                break;
+            }
+        }
+        res[i] = diff;
+    }
+    return res;
+}
+
+/*
+ 跳跃对比:
+ */
+int* dailyTemperatures2(int* T, int TSize, int* returnSize){
+
+    int *res = (int *)malloc(sizeof(int) * TSize);
+    *returnSize = TSize;
+    // 最后一个元素,一定没有比他温度跟高的,所以等于0
+    res[TSize - 1] = 0;
+
+    // 从 TSize - 1 开始往前遍历
+    for (int i = TSize - 2; i >= 0; i--) {
+        int x = T[i];
+        int diff = 0;
+        for (int j = i + 1; j < TSize; ) {
+            int y = T[j];
+            if (y > x) {
+                diff = j - i;
+                break;
+            } else {
+                // 利用已知信息进行跳跃对比
+                if (res[j] == 0) {
+                    // 第j天的温度, 比第i天更低, 第j天后面没有比他温度更高的,那么一定不会出现比第i天更高的,
+                    diff = 0;
+                    break;
+                } else {
+                    // 第j天后面还有比他更高的,那么直接跳到这天进行对比
+                    j+=res[j];
+                }
+            }
+        }
+        
+        res[i] = diff;
+    }
+    return res;
+}
 
 /*
  解法二:
  栈
  */
 
-int* dailyTemperatures(int* T, int TSize, int* returnSize){
+int* dailyTemperatures3(int* T, int TSize, int* returnSize){
     
     int *stack = (int *)malloc(sizeof(int) * TSize);
     int top = -1;
@@ -68,13 +105,9 @@ int* dailyTemperatures(int* T, int TSize, int* returnSize){
         top++;
         stack[top] = i;
     }
-    if (top != -1) {
-        int topIndex = stack[top];
-        result[topIndex] = 0;
-        while (top != -1) {
-            result[stack[top]] = 0;
-            top--;
-        }
+    while (top != -1) {
+        result[stack[top]] = 0;
+        top--;
     }
 
     return result;
@@ -87,7 +120,7 @@ int main(int argc, const char * argv[]) {
     int temps[] = {73,74,75,71,69,72,76,73};
     int returnSize;
     
-    int *res = dailyTemperatures(temps, 8, &returnSize);
+    int *res = dailyTemperatures3(temps, 8, &returnSize);
     
     for (int i = 0; i < returnSize; i++) {
         printf("%d  ", res[i]);

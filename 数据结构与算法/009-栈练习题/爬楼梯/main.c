@@ -24,20 +24,22 @@ int climbStairs1(int n) {
     return climbStairs1(n - 1) + climbStairs1(n - 2);
 }
 
+/*
+ 解法二:
+ 动态规划
+ 
+ */
 int climbStairs2(int n) {
     
     if (n < 3) {
         return n;
     }
-    
     int arr[n];
     arr[0] = 1;
     arr[1] = 2;
-    
     for (int i = 2; i < n; i++) {
         arr[i] = arr[i - 1] + arr[i - 2];
     }
-    
     return arr[n - 1];
 }
 
@@ -45,6 +47,7 @@ int climbStairs2(int n) {
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    printf("Hello, World!\n");
+
+    
     return 0;
 }
