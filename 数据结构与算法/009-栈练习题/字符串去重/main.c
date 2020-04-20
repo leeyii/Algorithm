@@ -84,40 +84,57 @@ int StackLength(Stack s) {
 
 char * removeDuplicateLetters(char * s){
     
-    char *letters = (char *)malloc(sizeof(char) * 26);
-    memset(letters, 0, 26);
+    // 记录字符出现次数的数组
+    int *letterAppearCount = (int *)malloc(sizeof(int) * 26);
+    memset(letterAppearCount, 0, sizeof(int) * 26);
+    // 记录字符是否在栈中的数组
+    int *seen = (int *)malloc(sizeof(int) * 26);
+    memset(seen, 0, 26 * sizeof(char));
     
     unsigned long length = strlen(s);
     
     for (int i = 0; i < length; i++) {
-        letters[s[i] - 'a'] =  letters[s[i] - 'a'] + 1;
+        letterAppearCount[s[i] - 'a']++;
+        // printf("字符%c出现次数: %d\n", s[i], letterAppearCount[s[i] - 'a']);
     }
     
-    Stack stack;
-    InitStack(&stack);
-    PushStack(&stack, s[0]);
+    char *stack = malloc(sizeof(char) * 27);
+    int top = -1;
     
-    for (int i = 1; i < length; i++) {
+    for (int i = 0; i < length; i++) {
         char c = s[i];
-        char top;
-        GetTop(stack, &top);
-        if (c < top) {
-            while (letters[top - 'a'] > 0 && StackLength(stack) != 0) {
-                letters[top - 'a'] = letters[top - 'a'] - 1;
-                PopStack(&stack, NULL);
-            }
+        
+        // 字符已经在栈中
+        if (seen[c - 'a'] == 1) {
+            // 当初字符的出现次数-1
+            letterAppearCount[c - 'a']--;
+            continue;
         }
-        PushStack(&stack, c);
+        
+        while (top != -1 &&
+               stack[top] > c &&
+               letterAppearCount[stack[top] - 'a'] > 1) {
+            seen[stack[top] - 'a'] = 0;
+            letterAppearCount[stack[top] - 'a']--;
+            //printf("out %c, 剩余次数: %d\n", stack[top], letterAppearCount[stack[top] - 'a']);
+            top--;
+        }
+        top++;
+        stack[top] = c;
+        seen[c - 'a'] = 1;
+        //printf("in %c\n", c);
     }
-    PushStack(&stack, '\0');
-    return stack.data;
+    top++;
+    stack[top] = '\0';
+    //printf("result: %s\n", stack);
+    return stack;
 }
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
     
-    char *res = removeDuplicateLetters("bbccaa");
+    char *res = removeDuplicateLetters("edebbed");
     printf("%s\n", res);
     return 0;
 }
