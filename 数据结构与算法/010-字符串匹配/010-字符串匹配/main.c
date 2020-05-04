@@ -192,8 +192,9 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
     
-    int index = KMP1("
-                     ", "ccc");
+//    int index = KMP1("", "ccc");
+    
+    int index = BF("abcacabdc", "abd");
     
     printf("index: %d\n", index);
     
