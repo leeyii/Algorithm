@@ -491,7 +491,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 074F93D824484B31007C030E /* Build configuration list for PBXProject "009-栈练习题" */;
+			buildConfigurationList = 074F93D824484B31007C030E /* Build configuration list for PBXProject "010-栈练习题" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -889,7 +889,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		074F93D824484B31007C030E /* Build configuration list for PBXProject "009-栈练习题" */ = {
+		074F93D824484B31007C030E /* Build configuration list for PBXProject "010-栈练习题" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				074F93E224484B31007C030E /* Debug */,
