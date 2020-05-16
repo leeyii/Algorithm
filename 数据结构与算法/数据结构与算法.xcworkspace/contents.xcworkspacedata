@@ -32,6 +32,9 @@
       location = "group:&#x6570;&#x636e;&#x7ed3;&#x6784;&#x4e0e;&#x7b97;&#x6cd5;(&#x4e5d;)--&#x5b57;&#x7b26;&#x4e32;&#x5339;&#x914d;KMP&#x7b97;&#x6cd5;.md">
    </FileRef>
    <FileRef
+      location = "group:&#x6570;&#x636e;&#x7ed3;&#x6784;&#x4e0e;&#x7b97;&#x6cd5;(&#x5341;)--&#x4e8c;&#x53c9;&#x6811;.md">
+   </FileRef>
+   <FileRef
       location = "group:001-&#x987a;&#x5e8f;&#x8868;/001-&#x987a;&#x5e8f;&#x8868;.xcodeproj">
    </FileRef>
    <FileRef
@@ -66,5 +69,17 @@
    </FileRef>
    <FileRef
       location = "group:011-&#x4e8c;&#x53c9;&#x6811;/011-&#x4e8c;&#x53c9;&#x6811;.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:012-&#x7ebf;&#x7d22;&#x5316;&#x4e8c;&#x53c9;&#x6811;/012-&#x7ebf;&#x7d22;&#x5316;&#x4e8c;&#x53c9;&#x6811;.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:013-&#x54c8;&#x5f17;&#x66fc;&#x7f16;&#x7801;/013-&#x54c8;&#x5f17;&#x66fc;&#x7f16;&#x7801;.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:014-&#x56fe;/014-&#x56fe;.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:015-&#x641c;&#x7d22;/015-&#x641c;&#x7d22;.xcodeproj">
    </FileRef>
 </Workspace>
