@@ -50,6 +50,21 @@ int BF(char *s, char *p) {
     return start;
 }
 
+/// 计算字符串的hash值
+/// @param s 字符串
+/// @param length 字符串长度
+int hashValue(char *s, int length) {
+    
+    int hashValue = 0;
+    // 进制
+    int d = 26;
+    
+    for (int i = 0; i < length; i++) {
+        hashValue = hashValue * d + (s[i] - 'a' + 1);
+    }
+    return hashValue;
+}
+
 int isMach(char *s, char *p, unsigned long m, int pos) {
     for (int i = 0; i < m; i++) {
         if (s[pos + i] != p[i]) return 0;
