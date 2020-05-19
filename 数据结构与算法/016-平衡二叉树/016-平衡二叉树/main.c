@@ -7,6 +7,15 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+
+typedef int Status;
+
+#define TRUE 1
+#define FALSE 0
+
+#define OK 1
+#define ERRPR 0
 
 // 平衡二叉树（AVL）： 是一种二叉排序树，其中每一个节点的左子树和右子树的高度差至多等于1.
 
@@ -56,7 +65,7 @@ void R_Rotate(BiTree *p) {
 
 void LeftBalance(BiTree *T) {
     
-    BiTree l, ll, lr;
+    BiTree l, lr;
     
     l = (*T)->lchild;
     
@@ -73,17 +82,20 @@ void LeftBalance(BiTree *T) {
             switch (lr->bf) {
                 case LH:
                 {
-                    
+                    (*T)->bf = RH;
+                    l->bf = EH;
                     break;
                 }
                 case EH:
                 {
-
+                    (*T)->bf = EH;
+                    l->bf = EH;
                     break;
                 }
                 case RH:
                 {
-                    
+                    (*T)->bf = EH;
+                    l->bf = LH;
                     break;
                 }
             }
@@ -98,6 +110,124 @@ void LeftBalance(BiTree *T) {
 
 void RightBalance(BiTree *T) {
     
+    BiTree r, rl;
+    
+    r = (*T)->rchild;
+    
+    switch (r->bf) {
+        case RH:
+        {
+            r->bf = (*T)->bf = EH;
+            L_Rotate(T);
+            break;
+        }
+        case LH:
+        {
+            rl = r->lchild;
+            switch (rl->bf) {
+                case LH:
+                {
+                    (*T)->bf = EH;
+                    r->bf = RH;
+                    break;
+                }
+                case EH:
+                {
+                    (*T)->bf = EH;
+                    r->bf = EH;
+                    break;
+                }
+                case RH:
+                {
+                    (*T)->bf = LH;
+                    r->bf = EH;
+                    break;
+                }
+            }
+            r->bf = EH;
+            R_Rotate(&r);
+            L_Rotate(T);
+            break;
+        }
+    }
+}
+
+Status InsertAVLTree(BiTree *T, int key, int *taller) {
+    
+    if (T == NULL) {
+        BiNode *node = (BiTree)malloc(sizeof(BiNode));
+        node->data = key;
+        node->bf = EH;
+        node->lchild = NULL;
+        node->rchild = NULL;
+        *T = node;
+        *taller = TRUE;
+        return TRUE;
+    } else {
+        
+        if (key < (*T)->data) {
+            
+            if (!InsertAVLTree(&(*T)->lchild, key, taller)) {
+                return FALSE;
+            } else {
+                if (*taller) {
+                    switch ((*T)->bf) {
+                        case LH:
+                        {
+                            LeftBalance(T);
+                            *taller = FALSE;
+                            break;
+                        }
+                        case EH:
+                        {
+                            (*T)->bf = LH;
+                            *taller = TRUE;
+                            break;
+                        }
+                        case RH:
+                        {
+                            (*T)->bf = EH;
+                            *taller = FALSE;
+                            break;
+                        }
+                    }
+                }
+            }
+            
+        } else if (key > (*T)->data) {
+            
+            if (!InsertAVLTree(&(*T)->rchild, key, taller)) {
+                return FALSE;
+            } else {
+                if (*taller) {
+                    switch ((*T)->bf) {
+                        case LH:
+                        {
+                            (*T)->bf = EH;
+                            *taller = FALSE;
+                            break;
+                        }
+                        case EH:
+                        {
+                            (*T)->bf = RH;
+                            *taller = TRUE;
+                            break;
+                        }
+                        case RH:
+                        {
+                            RightBalance(T);
+                            *taller = FALSE; // note
+                            break;
+                        }
+                    }
+                }
+            }
+        } else {
+            *taller = FALSE;
+            return FALSE;
+        }
+    }
+    return TRUE;
 }
 
 
