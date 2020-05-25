@@ -88,4 +88,7 @@
    <FileRef
       location = "group:017-&#x6563;&#x5217;&#x8868;&#x67e5;&#x627e;(hash&#x8868;)/017-&#x6563;&#x5217;&#x8868;&#x67e5;&#x627e;(hash&#x8868;).xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:018-&#x6392;&#x5e8f;/018-&#x6392;&#x5e8f;.xcodeproj">
+   </FileRef>
 </Workspace>
